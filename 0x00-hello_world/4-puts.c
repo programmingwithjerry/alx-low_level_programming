@@ -1,6 +1,8 @@
 #include <stdio.h>
 /**
- *This is the main function
+ * main is the starting point for this program
+ *
+ * Return: with the value of 0 means success
  */
 int main(void)
 {
