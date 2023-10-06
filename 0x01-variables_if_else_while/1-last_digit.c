@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - E prints the last digit of the random number each time the program runs
+ * main - E prints the last digit of the random number each time
  * random number stored in the variable n each time
  * Return: Always 0 (Success)
  */
