@@ -10,7 +10,7 @@ int main(void)
 {
 	int n_base_ten;
 
-	for (n_base_ten = 0; n_base_ten < 10; n_base_ten++)
+	for (n_base_ten = 48; n_base_ten < 58; n_base_ten++)
 	{
 		putchar(n_base_ten);
 	}
