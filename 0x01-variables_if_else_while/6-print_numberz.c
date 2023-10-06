@@ -10,7 +10,7 @@ int main(void)
 {
 	int n_base_ten;
 
-	for (n_base_ten = 22; n < 32; n_base_ten++)
+	for (n_base_ten = 22; n_base_ten < 32; n_base_ten++)
 	{
 		putchar(n_base_ten);
 	}
