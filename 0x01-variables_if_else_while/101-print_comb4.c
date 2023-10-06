@@ -15,7 +15,7 @@ int main(void)
 		{
 			for (li = 50; li < 58; li++)
 			{
-				if (l > ma && ma > nu)
+				if (li > ma && ma > nu)
 				{
 					putchar(nu);
 					putchar(ma);
