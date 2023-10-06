@@ -15,7 +15,7 @@ int main(void)
 	{
 		printf("%d", n_base_ten);
 		n_base_ten++;
-		printf("\n");
 	}
+	printf("\n")
 	return (0);
 }
