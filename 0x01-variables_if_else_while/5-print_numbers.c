@@ -14,7 +14,7 @@ int main(void)
 	while (n_base_ten < 10)
 	{
 		printf("%d\n", n_base_ten);
-		n_base_ten++
+		n_base_ten++;
 	}
 	return (0);
 }
