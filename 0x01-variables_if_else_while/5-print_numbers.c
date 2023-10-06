@@ -13,8 +13,9 @@ int main(void)
 	n_base_ten = 0;
 	while (n_base_ten < 10)
 	{
-		printf("%d\n", n_base_ten);
+		printf("%d", n_base_ten);
 		n_base_ten++;
+		printf("\n");
 	}
 	return (0);
 }
