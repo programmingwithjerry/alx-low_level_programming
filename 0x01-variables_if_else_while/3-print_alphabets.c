@@ -9,6 +9,7 @@
 int main(void)
 {
 	int my_char;
+	int my_ch;
 
 	my_char = 'a';
 	while (my_char <= 'z')
