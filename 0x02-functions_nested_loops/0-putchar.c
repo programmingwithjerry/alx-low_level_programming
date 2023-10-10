@@ -2,7 +2,7 @@
   * File: 0-putchar.c
   */
 
- #include "main.h" 
+#include "main.h" 
 
  /** 
   * main-print putchar followed by a new line
