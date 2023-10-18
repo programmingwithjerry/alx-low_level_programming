@@ -20,9 +20,9 @@ void puts2(char *str)
 	tip = ori_string - 1;
 	for (opay = 0 ; opay <= tip ; opay++)
 	{
-		if (o % 2 == 0)
+		if (opay % 2 == 0)
 		{
-			_putchar(str[o]);
+			_putchar(str[opay]);
 		}
 	}
 	_putchar('\n');
