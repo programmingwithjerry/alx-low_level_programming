@@ -10,7 +10,8 @@ void puts2(char *str)
 	int ori_string; int tip; int opay;
 	char *y = str;
 	
-	ori_string =tip = 0;
+	ori_string = 0;
+	tip = 0;
 
 	while (*y != '\0')
 	{
