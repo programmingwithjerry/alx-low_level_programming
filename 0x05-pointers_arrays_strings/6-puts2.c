@@ -11,9 +11,9 @@ void puts2(char *str)
 	int tip;
 	int opay;
 	char *y = str;
+
 	ori_string = 0;
 	tip = 0;
-
 	while (*y != '\0')
 	{
 		y++;
