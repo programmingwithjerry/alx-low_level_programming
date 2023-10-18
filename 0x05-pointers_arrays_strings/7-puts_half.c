@@ -17,7 +17,7 @@ void puts_half(char *str)
 	n = (loni / 2);
 
 	if ((loni % 2) == 1)
-		
+
 		n = ((loni + 1) / 2);
 
 	for (a = n; str[a] != '\0'; a++)
