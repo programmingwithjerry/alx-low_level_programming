@@ -3,7 +3,6 @@
 /**
  * print_to_98 - prints all the integers between the number given and 98
  * @n: number to count from
- * 
  * Return: void
  */
 
