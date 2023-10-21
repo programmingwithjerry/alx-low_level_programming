@@ -13,7 +13,7 @@ int print_last_digit(int n)
 	if (n < 0)
 	{
 		n_positive = (n % 10) * -1;
-		last_digit = n_positive
+		last_digit = n_positive;
 		_putchar(last_digit + 48);
 		return (last_digit);
 	}
