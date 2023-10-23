@@ -17,7 +17,11 @@ char *_strchr(char *s, char c)
 		counter++;
 	}
 	if (s[counter] == c)
+	{
 		return (s + counter);
+	}
 	else
+	{
 		return (NULL);
+	}
 }
