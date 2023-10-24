@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * _strncat - Write a function that concatenates two strings. it will use at
  * most n bytes from src
