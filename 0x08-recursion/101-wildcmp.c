@@ -52,6 +52,7 @@ char *postfix_match(char *str, char *postfix)
 {
 	int str_len = strlen_no_wilds(str) - 1;
 	int postfix_len = strlen_no_wilds(postfix) - 1;
+
 	if (*postfix == '*')
 		iterate_wild(&postfix);
 
