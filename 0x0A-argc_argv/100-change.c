@@ -7,7 +7,7 @@
 /**
  * coinConverter - A Helper function that carry out the calculation
  * @i: Passed in variable from main for calculations
- * Return: The number of minimum coins required for the passed in variable
+ * Return: number of minimum coins required for the passed in variable
  */
 int coinConverter(int i)
 {
