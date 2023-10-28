@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * main - a program that takes two integer arguments 
+ * main - a program that takes two integer arguments
  * and then prints out the product
  * @argc: counts number of command line arguments
  * @argv: The array name
