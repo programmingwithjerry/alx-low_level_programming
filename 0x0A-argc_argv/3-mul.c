@@ -3,10 +3,9 @@
 #include "main.h"
 
 /**
- * main - a program that takes two integer arguments
- * and then prints out the product
- * @argc: counts number of command line arguments
- * @argv: The array name
+ * main - takes two integer arguments and prints the product
+ * @argc: Number of command line arguments
+ * @argv: Array name
  * Return: 1 if no arguments passed in, 0 otherwise
  */
 
@@ -24,7 +23,7 @@ int main(int argc, char *argv[])
 		n = 1;
 
 		for (m = 1; m < 3; m++)
-		m *= atoi(argv[m]);
+		n *= atoi(argv[m]);
 
 		printf("%d\n", n);
 	}
