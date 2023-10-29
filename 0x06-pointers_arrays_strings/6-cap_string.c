@@ -10,10 +10,10 @@ char *cap_string(char *s)
 {
 	int i_counter;
 
-/*  scan through provided string */
+/*scan through provided string */
 	i_counter = 0;
 	for (i_counter = 0; s[i_counter] != '\0'; i_counter++)
-	{/* if next character after i_counter is a char, change it to uppercase*/
+	{/*if next character after i_counter is a char, change it to uppercase*/
 		if (s[0] >= 97 && s[0] <= 122)
 		{
 			s[0] = s[0] - 32;
