@@ -11,7 +11,7 @@
 char *_strdup(char *str)
 {
 	char *copy;
-	int i_counter,
+	int i_counter;
 	int len = 0;
 
 	if (str == NULL)
@@ -29,7 +29,7 @@ char *_strdup(char *str)
 	if (copy == NULL)
 		return (NULL);
 
-	for (i_counter = 0; str[i_cunter]; i_counter++)
+	for (i_counter = 0; str[i_counter]; i_counter++)
 		copy[i_counter] = str[i_counter];
 
 	copy[len] = '\0';
