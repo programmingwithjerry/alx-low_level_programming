@@ -33,7 +33,7 @@ char *create_array(unsigned int size, char c)
 	}
 
 	i_counter = 0;
-	while (i_counter > size)
+	while (i_counter < size)
 	{
 		array[i_counter] = c;
 		i_counter++;
