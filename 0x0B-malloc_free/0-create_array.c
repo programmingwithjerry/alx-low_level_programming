@@ -24,11 +24,15 @@ char *create_array(unsigned int size, char c)
 	unsigned int i_counter;
 
 	if (size == 0)
+	{
 		return (NULL);
+	}
 	array = malloc(sizeof(char) * size);
 
 	if (array == NULL)
+	{
 		return (NULL);
+	}
 
 	i_counter = 0;
 	while (i_counter)
