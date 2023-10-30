@@ -52,6 +52,5 @@ int **alloc_grid(int width, int height)
 		}
 		hgt_ind_count++;
 	}
-
 	return (two_d);
 }
