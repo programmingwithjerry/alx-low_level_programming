@@ -6,7 +6,8 @@
  * @old_size: size, in bytes, of the allocated space of ptr.
  * @new_size: new size, in bytes, of the new memory block.
  * The contents will be copied to the newly allocated space,
- * in the range from the start of ptr up to the minimum of the old and new sizes
+ * in the range from the start of ptr up to the minimum
+ * of the old and new sizes
  * Return: ptr.
  * if new_size == old_size, returns ptr without changes.
  * if malloc fails, returns NULL.
