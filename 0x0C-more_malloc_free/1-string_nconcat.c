@@ -18,36 +18,32 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL)
 		s1 = "";
-
 	if (s2 == NULL)
 		s2 = "";
-
 	lst1 = 0;
 	while (s1[lst1] != '\0')
 	{
 		lst1++;
 	}
-
 	for (lst2 = 0; s2[lst2] != '\0'; lst2++)
 		;
-
 	if (n > lst2)
 		n = lst2;
-
 	lstout = lst1 + n;
-
 	new_mem = malloc(lstout + 1);
-
 	if (new_mem == NULL)
 		return (NULL);
-
-	for (i_count = 0; i_count < lstout; i_count++)
-		if (i < ls1)
+	i_count = 0;
+	while (i_count < lstout)
+	{
+		if (i_count < lst1)
+		{
 			new_mem[i_count] = s1[i_count];
+		}
 		else
 			new_mem[i_count] = s2[i_count - lst1];
-
+		i_count++;
+	}
 	new_mem[i_count] = '\0';
-
 	return (new_mem);
 }
