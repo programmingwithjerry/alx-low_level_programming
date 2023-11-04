@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #define LARGEST 10000000000
 /**
@@ -9,35 +10,33 @@
 
 int main(void)
 {
-	unsigned long int fr1 = 0, bk1 = 1, fr2 = 0, bk2 = 2;
-	unsigned long int hold1, hold2, hold3;
-	int count;
+	unsigned long int fib1 = 0, bik1 = 1, fib2 = 0, bik2 = 2;
+	unsigned long int temp1, temp2, temp3;
+	int i_count;
 
-	printf("%lu, %lu, ", bk1, bk2);
-	for (count = 2; count < 98; count++)
+	printf("%lu, %lu, ", bik1, bik2);
+	for (i_count = 2; i_count < 98; i_count++)
 	{
-		if (bk1 + bk2 > LARGEST || fr2 > 0 || fr1 > 0)
+		if (bik1 + bik2 > LARGEST || fib2 > 0 || fib1 > 0)
 		{
-			hold1 = (bk1 + bk2) / LARGEST;
-			hold2 = (bk1 + bk2) % LARGEST;
-			hold3 = fr1 + fr2 + hold1;
-			fr1 = fr2, fr2 = hold3;
-			bk1 = bk2, bk2 = hold2;
-			printf("%lu%010lu", fr2, bk2);
+			temp1 = (bik1 + bik2) / LARGEST;
+			temp2 = (bik1 + bik2) % LARGEST;
+			temp3 = fib1 + fib2 + temp1;
+			fib1 = fib2, fib2 = temp3;
+			bik1 = bik2, bik2 = temp2;
+			printf("%lu%010lu", fib2, bik2);
 		}
 
 		else
 		{
-			bk1 + bk2;
-			bk1 = bk2, bk2 = hold2;
-			printf("%lu", bk2);
+			bik1 = bik2, bik2 = temp2;
+			printf("%lu", bik2);
 		}
 
-		if (count != 97)
+		if (i_count != 97)
 		{
 			printf(", ");
 		}
 		printf("\n");
-
-		return (0);
+	}
 }
