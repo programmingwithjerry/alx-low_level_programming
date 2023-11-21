@@ -6,28 +6,25 @@
  * @head: A pointer to listint_t limked list
  * Return: 98 if fails
  */
+
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t nodes = 0;
-	const listint_t *first = head, *second = head;
+	size_t number_of_nodes = 0;
+	long int ptr_diffs;
 
-	if (head == NULL)
-		exit(98);
-
-	while (first && second && second->next && head)
+	while (head)
 	{
-		first = first->next;
-		second = second->next->next;
-		if (first == second)
-		{
-			printf("-> [%p] %d\n", (void *)head, head->n);
-			exit(98);
-		}
-
+		ptr_diffs = head - head->next;
+		number_of_nodes++;
 		printf("[%p] %d\n", (void *)head, head->n);
-		head = head->next;
-		nodes++;
+		if (ptr_diffs > 0)
+			head = head->next;
+		else
+		{
+			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
+			break;
+		}
 	}
-	head = NULL;
-	return (nodes);
+
+	return (number_of_nodes);
 }
