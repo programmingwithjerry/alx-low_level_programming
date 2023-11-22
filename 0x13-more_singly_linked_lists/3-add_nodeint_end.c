@@ -26,9 +26,10 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		return (temp_store);
 	}
 
-	for (temp_store2 = *head; temp_store2->next; temp_store2 = temp_store2->next)
-
-		temp_store2->next = temp_store;
+	temp_store2 = *head;
+	while (temp_store2->next)
+		temp_store2 = temp_store2->next;
+	temp_store2->next = temp;
 
 	return (temp_store);
 }
