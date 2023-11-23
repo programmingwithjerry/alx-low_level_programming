@@ -7,6 +7,7 @@
  * there is one or more chars in the string b that is not 0 or
  * 1 b is NULL
  */
+
 unsigned int binary_to_uint(const char *b)
 {
 	int i;
@@ -14,18 +15,12 @@ unsigned int binary_to_uint(const char *b)
 
 	if (!b)
 		return (0);
-
-	while (b[i])
+	/*Iterate through the characters of the string 'b'*/
+	for (i = 0; b[i]; i++)
 	{
-		/*Check if the current character is not '0' or '1'*/
 		if (b[i] < '0' || b[i] > '1')
 			return (0);
-
-		/*Update the decimal value using the binary representation*/
 		decimal_value = 2 * decimal_value + (b[i] - '0');
-
-		/*Increment the loop counter*/
-		i++;
 	}
 	return (decimal_value);
 }
