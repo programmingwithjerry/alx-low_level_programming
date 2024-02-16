@@ -1,24 +1,16 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-* main - invokes an infinite loop
-* Return: 0
-*/
+  * main - function to test for positive or negative
+  * Return: 0
+  */
 
 int main(void)
 {
 	int i;
 
-	printf("Expect an infinite loop :(\n");
-
 	i = 0;
-/*
-*while (i < 10)
-*{
-*putchar(i);
-*}
-*/
-	printf("Infinite loop handled! \\o/\n");
+	positive_or_negative(i);
 
-	return (0);
+return (0);
 }
