@@ -15,11 +15,11 @@ void hash_table_print(const hash_table_t *ht)
 	/* Declare variables */
 	unsigned long int idx;
 	hash_node_t *current_node;
-	char *sept;
+	char *separator;
 
-	/* Initialize sept */
+	/* Initialize separator */
 	printf("{");
-	sept = "";
+	separator = "";
 
 	/* Iterate over the hash table */
 	idx = 0;
@@ -32,10 +32,10 @@ void hash_table_print(const hash_table_t *ht)
 		while (current_node != NULL)
 		{
 			/* Print key-value pair */
-			printf("%s'%s': '%s'", sept, current_node->key, current_node->value);
+			printf("%s'%s': '%s'", separator, current_node->key, current_node->value);
 
-			/* Update sept */
-			sept = ", ";
+			/* Update separator */
+			separator = ", ";
 
 			/* Move to the next node */
 			current_node = current_node->next;
