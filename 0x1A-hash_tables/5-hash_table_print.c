@@ -6,44 +6,32 @@
  * @ht: Pointer to the hash table.
  */
 
+
 void hash_table_print(const hash_table_t *ht)
 {
-	/* Check if hash table pointer is NULL */
+	unsigned long int idx;
+	hash_node_t *current_node;
+	char *separator;
+
 	if (ht == NULL)
 		return;
 
-	/* Declare variables */
-	unsigned long int idx;
-	hash_node_t *c_node;
-	char *sept;
-
-	/* Initialize sept */
-	sept = "";
-
-	/* Print opening brace */
 	printf("{");
+	separator = "";
 
-	/* Iterate over the hash table */
-	for (idx = 0; idx < ht->size; idx++)
+	idx = 0;
+	while (idx < ht->size)
 	{
-		/* Get the head of the linked list at the current index */
-		c_node = ht->array[idx];
-
-		/* Traverse the linked list */
-		while (c_node != NULL)
+		current_node = ht->array[idx];
+		while (current_node != NULL)
 		{
-			/* Print key-value pair */
-			printf("%s'%s': '%s'", sept, c_node->key, c_node->value);
-
-			/* Update sept */
-			sept = ", ";
-
-			/* Move to the next node */
-			c_node = c_node->next;
+			printf("%s'%s': '%s'", separator, current_node->key, current_node->value);
+			separator = ", ";
+			current_node = current_node->next;
 		}
+		idx++;
 	}
 
-	/* Print closing brace and newline */
 	printf("}\n");
 }
-
+			
