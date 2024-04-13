@@ -17,12 +17,13 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *current_node;
 	char *separator;
 
-	/* Initialize separator and opening brace */
+	/* Initialize separator */
 	printf("{");
 	separator = "";
 
 	/* Iterate over the hash table */
-	for (idx = 0; idx < ht->size; idx++)
+	idx = 0;
+	while (idx < ht->size)
 	{
 		/* Get the head of the linked list at the current index */
 		current_node = ht->array[idx];
@@ -39,6 +40,7 @@ void hash_table_print(const hash_table_t *ht)
 			/* Move to the next node */
 			current_node = current_node->next;
 		}
+		idx++;
 	}
 
 	/* Print closing brace and newline */
