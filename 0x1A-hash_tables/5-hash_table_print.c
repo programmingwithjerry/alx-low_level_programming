@@ -14,7 +14,7 @@ void hash_table_print(const hash_table_t *ht)
 
 	/* Declare variables */
 	unsigned long int idx;
-	hash_node_t *c_node;
+	hash_node_t *current_node;
 	char *sept;
 
 	/* Initialize sept */
@@ -26,19 +26,19 @@ void hash_table_print(const hash_table_t *ht)
 	while (idx < ht->size)
 	{
 		/* Get the head of the linked list at the current index */
-		c_node = ht->array[idx];
+		current_node = ht->array[idx];
 
 		/* Traverse the linked list */
-		while (c_node != NULL)
+		while (current_node != NULL)
 		{
 			/* Print key-value pair */
-			printf("%s'%s': '%s'", sept, c_node->key, c_node->value);
+			printf("%s'%s': '%s'", sept, current_node->key, current_node->value);
 
 			/* Update sept */
 			sept = ", ";
 
 			/* Move to the next node */
-			c_node = c_node->next;
+			current_node = current_node->next;
 		}
 		idx++;
 	}
