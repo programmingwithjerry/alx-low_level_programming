@@ -6,6 +6,7 @@
  * Return: no return
  */
 
+
 void hash_table_print(const hash_table_t *ht)
 {
 	/* Check if hash table pointer is NULL */
@@ -17,13 +18,12 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *current_node;
 	char *separator;
 
-	/* Initialize separator */
+	/* Initialize separator and opening brace */
 	printf("{");
 	separator = "";
 
 	/* Iterate over the hash table */
-	idx = 0;
-	while (idx < ht->size)
+	for (idx = 0; idx < ht->size; idx++)
 	{
 		/* Get the head of the linked list at the current index */
 		current_node = ht->array[idx];
@@ -40,7 +40,6 @@ void hash_table_print(const hash_table_t *ht)
 			/* Move to the next node */
 			current_node = current_node->next;
 		}
-		idx++;
 	}
 
 	/* Print closing brace and newline */
