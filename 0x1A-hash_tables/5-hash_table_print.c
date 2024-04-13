@@ -2,8 +2,8 @@
 
 /**
  * hash_table_print - Prints all key-value pairs in the hash table.
- *
  * @ht: Pointer to the hash table.
+ * Return: no return
  */
 
 void hash_table_print(const hash_table_t *ht)
