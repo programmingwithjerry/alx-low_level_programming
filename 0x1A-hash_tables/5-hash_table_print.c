@@ -23,6 +23,7 @@ void hash_table_print(const hash_table_t *ht)
 
 	/* Iterate over the hash table */
 	idx = 0;
+
 	while (idx < ht->size)
 	{
 		/* Get the head of the linked list at the current index */
