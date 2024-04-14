@@ -8,22 +8,21 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	/* Check if hash table pointer is NULL */
-	if (ht == NULL)
-		return;
-
 	/* Declare variables */
 	unsigned long int idx;
 	hash_node_t *current_node;
 	char *separator;
+
+	idx = 0;
+	/* Check if hash table pointer is NULL */
+	if (ht == NULL)
+		return;
 
 	/* Initialize separator */
 	printf("{");
 	separator = "";
 
 	/* Iterate over the hash table */
-	idx = 0;
-
 	while (idx < ht->size)
 	{
 		/* Get the head of the linked list at the current index */
