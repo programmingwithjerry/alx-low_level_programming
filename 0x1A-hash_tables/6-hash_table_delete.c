@@ -7,12 +7,11 @@
  */
 void hash_table_delete(hash_table_t *ht)
 {
+	/* Iterate over each index in the hash table */
+	unsigned long int index = 0;
 	/* Check if hash table exists */
 	if (ht == NULL)
 		return;
-
-	/* Iterate over each index in the hash table */
-	unsigned long int index = 0;
 
 	while (index < ht->size)
 	{
