@@ -2,49 +2,36 @@
 
 
 /**
- * hash_table_delete - Deletes a hash table and its contents.
+ * hash_table_delete - a function that deletes a hash table.
  *
- * @ht: Pointer to the hash table to delete.
+ * @ht: ht is the hash table
  */
+
 void hash_table_delete(hash_table_t *ht)
 {
-	/* Check if hash table pointer is NULL */
+	/* Check if hash table exists */
 	if (ht == NULL)
 		return;
 
-	/* Declare variables */
-	unsigned long int idx;
-	hash_node_t *current_node;
-	hash_node_t *next_node;
-
-	/* Iterate over the hash table */
-	for (idx = 0; idx < ht->size; idx++)
+	/* Iterate over each index in the hash table */
+	unsigned long int index = 0;
+	while (index < ht->size)
 	{
-		/* Get the head of the linked list at the current index */
-		current_node = ht->array[idx];
-
-		/* Traverse the linked list */
+		/* Get the current node at the index */
+		hash_node_t *current_node = ht->array[index];
 		while (current_node != NULL)
 		{
-			/* Free key and value of current node */
-			free(current_node->key);
-			free(current_node->value);
-
-			/* Save reference to next node */
-			next_node = current_node->next;
-
-			/* Free current node */
-			free(current_node);
-
-			/* Move to the next node */
-			current_node = next_node;
+			/* Delete the current node */
+			hash_node_t *node_to_delete = current_node;
+			current_node = current_node->next;
+			free(node_to_delete->key);
+			free(node_to_delete->value);
+			free(node_to_delete);
 		}
+		index++;
 	}
-
-	/* Free array of pointers */
+	/* Free the array of pointers and the hash table itself */
 	free(ht->array);
-
-	/* Free hash table itself */
 	free(ht);
 }
 
