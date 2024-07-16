@@ -30,8 +30,7 @@ int interpolation_search(int *array, size_t size, int value)
 			/* Check if mid is out of the array bounds */
 			if (mid < left || mid > right)
 			{
-				printf("Value checked array[%lu]
-					is out of range\n", mid);
+				printf("Value checked array[%lu] is out of range\n", mid);
 				break;
 			}
 			/* Print the current element being checked */
