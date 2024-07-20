@@ -53,7 +53,7 @@ int binary_search(int *array, size_t size, int value)
 
 		/* Calculate the middle index */
 		mid = left + (right - left) / 2;
-		
+
 		/* Check if the middle element is the target value */
 		if (array[mid] == value)
 			return (mid);
