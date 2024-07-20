@@ -44,7 +44,8 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	/* Perform a linear search within the identified block */
 	for (; current && current->index <= list->index; current = current->next)
 	{
-		printf("Value checked at index [%d] = [%d]\n", (int)current->index, current->n);
+		printf("Value checked at index [%d] = [%d]\n",
+			(int)current->index, current->n);
 		if (current->n == value)
 			return (current);
 	}
