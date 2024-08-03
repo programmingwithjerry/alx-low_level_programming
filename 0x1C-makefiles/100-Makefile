@@ -11,17 +11,20 @@ NAME = school
 all: $(NAME)
 
 # Rule to build the executable
-$(NAME): $(SRC) m.h
-	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
+$(NAME): $(OBJ) m.h
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+# Rule to compile source files into object files
+%.o: %.c m.h
+	$(CC) $(CFLAGS) -c $< -o $@
 
 # Rule to clean Emacs and Vim temporary files along with the executable
 clean:
-	$(RM) $(NAME)
-	$(RM) *~ \#* \.swp \.swo
+	rm -f $(NAME) *~ \#* .swp .swo
 
 # Rule to delete object files
 oclean:
-	$(RM) $(OBJ)
+	rm -f $(OBJ)
 
 # Rule to delete Emacs and Vim temporary files, the executable, and object files
 fclean: clean oclean
