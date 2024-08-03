@@ -15,8 +15,8 @@ $(NAME): $(OBJ) m.h
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 # Rule to compile source files into object files
-%.o: %.c m.h
-	$(CC) $(CFLAGS) -c $< -o $@
+$(OBJ): $(SRC) m.h
+	$(CC) $(CFLAGS) -c $(SRC)
 
 # Rule to clean Emacs and Vim temporary files along with the executable
 clean:
