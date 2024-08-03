@@ -4,6 +4,7 @@
     the perimeter of the island
 """
 
+
 def island_perimeter(grid):
     """
     Calculate the perimeter of the island described in the grid.
@@ -11,7 +12,7 @@ def island_perimeter(grid):
     The grid is a list of lists where:
     - 0 represents a water zone.
     - 1 represents a land zone.
-    
+
     The function assumes:
     - The grid is rectangular with width and height not
     - exceeding 100.
@@ -38,11 +39,11 @@ def island_perimeter(grid):
     """
     # Initialize perimeter count
     perimeter = 0
-    
+
     # Get the number of rows and columns in the grid
     rows = len(grid)
     cols = len(grid[0])
-    
+
     # Iterate through each cell in the grid
     for r in range(rows):
         for c in range(cols):
@@ -50,24 +51,24 @@ def island_perimeter(grid):
             if grid[r][c] == 1:
                 # Start with the maximum possible perimeter for a land cell
                 cell_perimeter = 4
-                
+
                 # Check the cell above
                 if r > 0 and grid[r - 1][c] == 1:
                     cell_perimeter -= 1
-                
+
                 # Check the cell below
                 if r < rows - 1 and grid[r + 1][c] == 1:
                     cell_perimeter -= 1
-                
+
                 # Check the cell to the left
                 if c > 0 and grid[r][c - 1] == 1:
                     cell_perimeter -= 1
-                
+
                 # Check the cell to the right
                 if c < cols - 1 and grid[r][c + 1] == 1:
                     cell_perimeter -= 1
-                
+
                 # Add the cell's perimeter to the total perimeter
                 perimeter += cell_perimeter
-    
+
     return perimeter
