@@ -9,14 +9,15 @@ def island_perimeter(grid):
     - 1 represents a land zone.
     
     The function assumes:
-    - The grid is rectangular with width and height not exceeding 100.
+    - The grid is rectangular with width and height not
+    - exceeding 100.
     - The grid is surrounded by water.
     - There is exactly one island (or nothing), and the island does
     - not have lakes.
 
     Args:
-        grid (list of list of int): 2D grid representing the map of land
-        and water.
+        grid (list of list of int): 2D grid representing
+        the map of land and water.
 
     Returns:
         int: The perimeter of the island.
